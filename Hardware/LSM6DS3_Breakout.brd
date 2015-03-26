@@ -1632,21 +1632,6 @@ We've spent an enormous amount of time creating and checking these footprints an
 &lt;br&gt;&lt;br&gt;
 You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
 <packages>
-<package name="0603">
-<wire x1="-1.473" y1="0.983" x2="1.473" y2="0.983" width="0.0508" layer="39"/>
-<wire x1="1.473" y1="0.983" x2="1.473" y2="-0.983" width="0.0508" layer="39"/>
-<wire x1="1.473" y1="-0.983" x2="-1.473" y2="-0.983" width="0.0508" layer="39"/>
-<wire x1="-1.473" y1="-0.983" x2="-1.473" y2="0.983" width="0.0508" layer="39"/>
-<wire x1="-0.356" y1="0.432" x2="0.356" y2="0.432" width="0.1016" layer="51"/>
-<wire x1="-0.356" y1="-0.419" x2="0.356" y2="-0.419" width="0.1016" layer="51"/>
-<smd name="1" x="-0.85" y="0" dx="1.1" dy="1" layer="1"/>
-<smd name="2" x="0.85" y="0" dx="1.1" dy="1" layer="1"/>
-<text x="-0.889" y="0.762" size="0.4064" layer="25" font="vector">&gt;NAME</text>
-<text x="-1.016" y="-1.143" size="0.4064" layer="27" font="vector">&gt;VALUE</text>
-<rectangle x1="-0.8382" y1="-0.4699" x2="-0.3381" y2="0.4801" layer="51"/>
-<rectangle x1="0.3302" y1="-0.4699" x2="0.8303" y2="0.4801" layer="51"/>
-<rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
-</package>
 <package name="PAD-JUMPER-3-2OF3_NC_BY_PASTE_YES_SILK_FULL_BOX">
 <wire x1="1.27" y1="-1.016" x2="-1.27" y2="-1.016" width="0.1524" layer="21"/>
 <wire x1="1.27" y1="1.016" x2="1.524" y2="0.762" width="0.1524" layer="21" curve="-90"/>
@@ -1685,6 +1670,21 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <package name="TP_15TH">
 <pad name="P$1" x="0" y="0" drill="0.381" diameter="0.6096" stop="no"/>
 <circle x="0" y="0" radius="0.381" width="0" layer="30"/>
+</package>
+<package name="0603">
+<wire x1="-1.473" y1="0.983" x2="1.473" y2="0.983" width="0.0508" layer="39"/>
+<wire x1="1.473" y1="0.983" x2="1.473" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="1.473" y1="-0.983" x2="-1.473" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="-1.473" y1="-0.983" x2="-1.473" y2="0.983" width="0.0508" layer="39"/>
+<wire x1="-0.356" y1="0.432" x2="0.356" y2="0.432" width="0.1016" layer="51"/>
+<wire x1="-0.356" y1="-0.419" x2="0.356" y2="-0.419" width="0.1016" layer="51"/>
+<smd name="1" x="-0.85" y="0" dx="1.1" dy="1" layer="1"/>
+<smd name="2" x="0.85" y="0" dx="1.1" dy="1" layer="1"/>
+<text x="-0.889" y="0.762" size="0.4064" layer="25" font="vector">&gt;NAME</text>
+<text x="-1.016" y="-1.143" size="0.4064" layer="27" font="vector">&gt;VALUE</text>
+<rectangle x1="-0.8382" y1="-0.4699" x2="-0.3381" y2="0.4801" layer="51"/>
+<rectangle x1="0.3302" y1="-0.4699" x2="0.8303" y2="0.4801" layer="51"/>
+<rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
 </package>
 </packages>
 </library>
@@ -1942,7 +1942,6 @@ design rules under a new name.</description>
 <element name="C3" library="SparkFun-Capacitors" package="0603-CAP" value="0.1uF" x="10.4775" y="15.5575">
 <attribute name="PROD_ID" value="CAP-08390" x="10.4775" y="15.5575" size="1.778" layer="27" display="off"/>
 </element>
-<element name="L1" library="SparkFun-Passives" package="0603" value="NDUC-12579" x="7.3025" y="13.97"/>
 <element name="SJ1" library="SparkFun-Passives" package="PAD-JUMPER-3-2OF3_NC_BY_PASTE_YES_SILK_FULL_BOX" value="I2C ADDR LSB" x="13.97" y="22.86"/>
 <element name="SJ2" library="SparkFun-Passives" package="PAD-JUMPER-2-NC_BY_PASTE_YES_SILK" value="" x="19.05" y="14.9225"/>
 <element name="SJ3" library="SparkFun-Passives" package="PAD-JUMPER-2-NC_BY_PASTE_YES_SILK" value="" x="19.05" y="12.3825"/>
@@ -1982,6 +1981,9 @@ design rules under a new name.</description>
 </element>
 <element name="R2" library="SparkFun-Resistors" package="0603-RES" value="4.7K" x="1.905" y="5.23875" rot="R180">
 <attribute name="PROD_ID" value="RES-07857" x="1.905" y="5.23875" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
+<element name="L1" library="SparkFun-Passives" package="0603" value="RES-07859" x="-43.18" y="-30.48">
+<attribute name="PROD_ID" value="RES-07859" x="-43.18" y="-30.48" size="1.778" layer="27" display="off"/>
 </element>
 </elements>
 <signals>
@@ -2039,7 +2041,6 @@ design rules under a new name.</description>
 </signal>
 <signal name="N$1">
 <contactref element="C3" pad="1"/>
-<contactref element="L1" pad="2"/>
 <contactref element="U2" pad="8"/>
 <wire x1="11.525" y1="13.45" x2="10.045" y2="13.45" width="0.254" layer="1"/>
 <wire x1="9.6275" y1="15.5575" x2="9.6275" y2="13.8675" width="0.4064" layer="1"/>
@@ -2049,8 +2050,9 @@ design rules under a new name.</description>
 <wire x1="9.965625" y1="13.45" x2="9.604375" y2="13.81125" width="0.254" layer="1"/>
 <wire x1="9.965625" y1="13.45" x2="9.9434" y2="13.45" width="0.254" layer="1"/>
 <wire x1="9.9434" y1="13.45" x2="9.5504" y2="13.843" width="0.254" layer="1"/>
-<wire x1="8.1525" y1="13.97" x2="8.1525" y2="15.455" width="0.4064" layer="1"/>
 <wire x1="8.1525" y1="15.455" x2="8.255" y2="15.5575" width="0.4064" layer="1"/>
+<contactref element="L1" pad="2"/>
+<wire x1="9.5504" y1="13.843" x2="-42.33" y2="-30.48" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SCL">
 <contactref element="U2" pad="13"/>
@@ -2167,7 +2169,6 @@ design rules under a new name.</description>
 <contactref element="SJ1" pad="3"/>
 <contactref element="SJ6" pad="3"/>
 <contactref element="U2" pad="5"/>
-<contactref element="L1" pad="1"/>
 <wire x1="13.2" y1="14.47" x2="13.335" y2="14.605" width="0.254" layer="1"/>
 <wire x1="15.1375" y1="14.82" x2="14.9225" y2="14.605" width="0.4064" layer="1"/>
 <wire x1="14.9225" y1="14.605" x2="13.335" y2="14.605" width="0.4064" layer="1"/>
@@ -2201,7 +2202,6 @@ design rules under a new name.</description>
 <wire x1="6.50875" y1="12.22375" x2="7.46125" y2="12.22375" width="0.4064" layer="1"/>
 <wire x1="7.46125" y1="12.22375" x2="8.255" y2="12.22375" width="0.4064" layer="16"/>
 <wire x1="8.255" y1="12.22375" x2="8.255" y2="12.54125" width="0.4064" layer="16"/>
-<wire x1="6.4525" y1="13.97" x2="6.4525" y2="12.28" width="0.4064" layer="1"/>
 <wire x1="6.4525" y1="12.28" x2="6.50875" y2="12.22375" width="0.4064" layer="1"/>
 <wire x1="13.2" y1="14.47" x2="13.2" y2="14.5827125" width="0.254" layer="1"/>
 <wire x1="13.2" y1="14.5827125" x2="13.2984875" y2="14.6812" width="0.254" layer="1"/>
@@ -2219,6 +2219,8 @@ design rules under a new name.</description>
 <wire x1="5.87375" y1="10.63625" x2="5.87375" y2="11.7475" width="0.254" layer="16"/>
 <wire x1="5.87375" y1="11.7475" x2="6.35" y2="12.22375" width="0.254" layer="16"/>
 <wire x1="6.35" y1="12.22375" x2="7.46125" y2="12.22375" width="0.254" layer="16"/>
+<contactref element="L1" pad="1"/>
+<wire x1="1.055" y1="3.175" x2="-44.03" y2="-30.48" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$2">
 <contactref element="U2" pad="10"/>
