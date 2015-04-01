@@ -169,7 +169,7 @@
 <text x="19.52625" y="5.3975" size="1.016" layer="21" font="vector" ratio="15" rot="R90">GP1</text>
 <text x="21.43125" y="2.69875" size="1.016" layer="21" font="vector" ratio="15">GP2</text>
 <text x="1.905" y="10.795" size="0.8128" layer="21" font="vector" ratio="15" rot="R90">PULLUP</text>
-<text x="13.6525" y="6.35" size="0.8128" layer="21" font="vector" ratio="15" rot="R90">INT1</text>
+<text x="39.0525" y="8.89" size="0.8128" layer="21" font="vector" ratio="15" rot="R90">INT1</text>
 <text x="19.685" y="9.36625" size="0.8128" layer="21" font="vector" ratio="15">SERIAL</text>
 <text x="20.16125" y="15.24" size="0.8128" layer="21" font="vector" ratio="15">ADDR</text>
 <text x="24.13" y="12.7" size="0.8128" layer="21" font="vector" ratio="15" rot="R90">0x6B</text>
@@ -229,6 +229,8 @@
 <text x="16.98625" y="22.86" size="1.016" layer="22" font="vector" ratio="15" rot="MR270">SCX</text>
 <text x="19.52625" y="22.86" size="1.016" layer="22" font="vector" ratio="15" rot="MR270">SDX</text>
 <text x="22.06625" y="22.86" size="1.016" layer="22" font="vector" ratio="15" rot="MR270">SDO</text>
+<text x="3.65125" y="14.44625" size="0.8128" layer="21" font="vector" ratio="15" rot="R90">SDA</text>
+<text x="3.65125" y="8.89" size="0.8128" layer="21" font="vector" ratio="15" rot="R90">SCL</text>
 </plain>
 <libraries>
 <library name="SparkFun-Aesthetics">
@@ -1723,6 +1725,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <rectangle x1="-0.8382" y1="-0.4699" x2="-0.3381" y2="0.4801" layer="51"/>
 <rectangle x1="0.3302" y1="-0.4699" x2="0.8303" y2="0.4801" layer="51"/>
 <rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
+<circle x="0" y="0" radius="0.127" width="0.127" layer="21"/>
+<circle x="0" y="0" radius="0.0254" width="0.127" layer="21"/>
+<circle x="0" y="0" radius="0.218496875" width="0.127" layer="21"/>
 </package>
 </packages>
 </library>
@@ -1951,7 +1956,7 @@ design rules under a new name.</description>
 <element name="C4" library="SparkFun-Capacitors" package="0603-CAP" value="0.1uF" x="15.24" y="15.875" rot="R180">
 <attribute name="PROD_ID" value="CAP-08390" x="15.24" y="15.875" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="LOGO1" library="SparkFun-Aesthetics" package="SFE_LOGO_NAME_FLAME_.1" value="SFE_LOGO_NAME_FLAME.1_INCH" x="29.05125" y="1.905" rot="R90"/>
+<element name="LOGO1" library="SparkFun-Aesthetics" package="SFE_LOGO_NAME_FLAME_.1" value="SFE_LOGO_NAME_FLAME.1_INCH" x="28.8925" y="8.5725" rot="R90"/>
 <element name="LOGO2" library="SparkFun-Aesthetics" package="OSHW-LOGO-S" value="OSHW-LOGOS" x="27.305" y="22.86" rot="R90"/>
 <element name="LOGO3" library="SparkFun-Aesthetics" package="SFE_LOGO_FLAME_.6" value="SFE_LOGO_FLAME.6_INCH" x="21.59" y="18.415" rot="MR270"/>
 <element name="STANDOFF1" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="6.35" y="19.05"/>
@@ -2013,7 +2018,7 @@ design rules under a new name.</description>
 <wire x1="14.74" y1="14.4225" x2="14.76375" y2="14.44625" width="0.254" layer="1"/>
 <via x="2.54" y="5.08" extent="1-16" drill="0.254"/>
 <via x="2.54" y="20.32" extent="1-16" drill="0.254"/>
-<via x="27.94" y="20.32" extent="1-16" drill="0.254"/>
+<via x="27.305" y="22.86" extent="1-16" drill="0.254"/>
 <via x="27.94" y="1.42875" extent="1-16" drill="0.254"/>
 <via x="12.7" y="7.62" extent="1-16" drill="0.254"/>
 <via x="9.2075" y="15.24" extent="1-16" drill="0.254"/>
