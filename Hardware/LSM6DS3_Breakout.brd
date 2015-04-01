@@ -169,7 +169,6 @@
 <text x="19.52625" y="5.3975" size="1.016" layer="21" font="vector" ratio="15" rot="R90">GP1</text>
 <text x="21.43125" y="2.69875" size="1.016" layer="21" font="vector" ratio="15">GP2</text>
 <text x="1.905" y="10.795" size="0.8128" layer="21" font="vector" ratio="15" rot="R90">PULLUP</text>
-<text x="39.0525" y="8.89" size="0.8128" layer="21" font="vector" ratio="15" rot="R90">INT1</text>
 <text x="19.685" y="9.36625" size="0.8128" layer="21" font="vector" ratio="15">SERIAL</text>
 <text x="20.16125" y="15.24" size="0.8128" layer="21" font="vector" ratio="15">ADDR</text>
 <text x="24.13" y="12.7" size="0.8128" layer="21" font="vector" ratio="15" rot="R90">0x6B</text>
