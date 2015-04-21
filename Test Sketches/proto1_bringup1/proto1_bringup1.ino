@@ -44,8 +44,7 @@ void loop()
   Wire.beginTransmission(0x6B);
   Wire.write(LSM6DS3_ACC_GYRO_WHO_AM_I_REG);
   Wire.endTransmission();
-  
-  Wire.requestFrom(0x6B, 4);    // request 6 bytes from slave device #2
+  Wire.requestFrom(0x6B, 1);    // request 6 bytes from slave device #2
 
   while (Wire.available())   // slave may send less than requested
   {
