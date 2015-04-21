@@ -51,8 +51,8 @@ class Sparkfun_LSM6DS3 {
     int16_t readGyro( uint8_t );
     void readMag( void );
     int16_t readMag( uint8_t );
-    void readAll( void );
     int16_t readTemp( void );
+    void readAll( void );
     
   //private:
     void getRegion(uint8_t*, uint8_t, uint8_t );
@@ -124,6 +124,8 @@ typedef enum {
 #define LSM6DS3_ACC_GYRO_TAP_SRC  			0X1C
 #define LSM6DS3_ACC_GYRO_D6D_SRC  			0X1D
 #define LSM6DS3_ACC_GYRO_STATUS_REG  			0X1E
+#define LSM6DS3_ACC_GYRO_OUT_TEMP_L  			0X20
+#define LSM6DS3_ACC_GYRO_OUT_TEMP_H  			0X21
 #define LSM6DS3_ACC_GYRO_OUTX_L_G  			0X22
 #define LSM6DS3_ACC_GYRO_OUTX_H_G  			0X23
 #define LSM6DS3_ACC_GYRO_OUTY_L_G  			0X24

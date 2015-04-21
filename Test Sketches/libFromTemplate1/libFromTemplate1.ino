@@ -20,7 +20,7 @@ void setup( void ) {
   //mySensor.settings.magSampleRate = 1;
   //mySensor.settings.commInterface = I2C_MODE; //Can be I2C_MODE, SPI_MODE
   mySensor.settings.commAddress = 0x6B; //Ignored for SPI_MODE
-  //mySensor.settings.tempEnabled = 1;
+  mySensor.settings.tempEnabled = 1;
 
   uint8_t c = mySensor.begin();  //Can be called again to load new settings
   Serial.print("begin() ran.  Returns WHO_AM_I of: 0x");

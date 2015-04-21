@@ -105,7 +105,6 @@ int16_t Sparkfun_LSM6DS3::readAccel( uint8_t offset ) {
 //  Gyroscope section
 //
 //****************************************************************************//
-
 void Sparkfun_LSM6DS3::readGyro( void ) {
   uint8_t myBuffer[6];
   getRegion(myBuffer, LSM6DS3_ACC_GYRO_OUTX_L_G, 6);  //Does memory transfer
@@ -144,10 +143,27 @@ int16_t Sparkfun_LSM6DS3::readMag( uint8_t ) {
 //  Temperature section
 //
 //****************************************************************************//
-
 int16_t Sparkfun_LSM6DS3::readTemp( void ) {
-}
+  uint8_t myBuffer[2];
+  getRegion(myBuffer, LSM6DS3_ACC_GYRO_OUT_TEMP_L, 2);  //Does memory transfer
 
+  //Do the math to get from raw numbers to useful int
+  int16_t outputVariable = myBuffer[0] | (myBuffer[1] << 8);
+  
+  outputVariable = outputVariable >> 4; //divide by 16 to scale
+  outputVariable += 25; //Add 25 degrees to remove offset
+  
+  //Calibration
+  celsiusTemp = outputVariable;
+  fahrenheitTemp = (celsiusTemp * 9)/5 + 32;
+  
+  return outputVariable;
+}
+//****************************************************************************//
+//
+//  Utility
+//
+//****************************************************************************//
 void Sparkfun_LSM6DS3::readAll( void ) {
   readAccel();
   readGyro();
@@ -155,16 +171,10 @@ void Sparkfun_LSM6DS3::readAll( void ) {
   readTemp();
 }
 
-//****************************************************************************//
-//
-//  Utility
-//
-//****************************************************************************//
 void Sparkfun_LSM6DS3::getRegion(uint8_t *outputPointer , uint8_t offset, uint8_t length) {
 
   //define pointer that will point to the external space
-  //uint8_t * outputPointer;
-  //outputPointer = &outputRegion;
+  uint8_t i = 0;
   
   Wire.beginTransmission(settings.commAddress);
   Wire.write(offset);
@@ -172,11 +182,12 @@ void Sparkfun_LSM6DS3::getRegion(uint8_t *outputPointer , uint8_t offset, uint8_
   
   Wire.requestFrom(settings.commAddress, length);    // request 6 bytes from slave device #2
 
-  while (Wire.available())   // slave may send less than requested
+  while( (Wire.available()) && (i < length))   // slave may send less than requested
   {
     char c = Wire.read(); // receive a byte as character
     *outputPointer = c;
     outputPointer++;
+    i++;
   }
 
 }
