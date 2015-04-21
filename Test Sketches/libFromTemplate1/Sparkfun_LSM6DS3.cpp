@@ -2,7 +2,7 @@
 #include "Wire.h"
 
 //Constructor
-SensorPartNumber::SensorPartNumber( void ) {
+Sparkfun_LSM6DS3::Sparkfun_LSM6DS3( void ) {
   settings.gyroEnabled = 1;  //Can be 0 or 1
   settings.gyroScale = 1; //Can be 1, 2, 4, 6, 8 ..
   settings.gyroSampleRate = 1; //Can be...
@@ -31,7 +31,7 @@ SensorPartNumber::SensorPartNumber( void ) {
 }
 
 //Call to utilize the settings
-uint8_t SensorPartNumber::begin( void ) {
+uint8_t Sparkfun_LSM6DS3::begin( void ) {
   //Check the settings structure values to determine how to setup the device
   
   Wire.begin();
@@ -79,50 +79,24 @@ uint8_t SensorPartNumber::begin( void ) {
 //  Accelerometer section
 //
 //****************************************************************************//
-void SensorPartNumber::readAccel( void ) {
-  Wire.beginTransmission(settings.commAddress);
-  Wire.write(LSM6DS3_ACC_GYRO_OUTX_L_XL);
-  Wire.endTransmission();
-  
-  Wire.requestFrom(settings.commAddress, 6);    // request 6 bytes from slave device #2
-
-  uint8_t myBufferPointer = 0;
+void Sparkfun_LSM6DS3::readAccel( void ) {
   uint8_t myBuffer[6];
-  while (Wire.available())   // slave may send less than requested
-  {
-    char c = Wire.read(); // receive a byte as character
-    myBuffer[myBufferPointer] = c;
-    myBufferPointer++;
-  }
-  
-  //Do the to get from raw numbers to useful parts.  Save into class.
+  getRegion(myBuffer, LSM6DS3_ACC_GYRO_OUTX_L_XL, 6);  //Does memory transfer
+
+  //Do the math to get from raw numbers to useful parts.  Save into class.
   xAccel = myBuffer[0] | (myBuffer[1] << 8);
   yAccel = myBuffer[2] | (myBuffer[3] << 8);
   zAccel = myBuffer[4] | (myBuffer[5] << 8);
 
 }
 
-int16_t SensorPartNumber::readAccel( uint8_t offset ) {
-  Wire.beginTransmission(settings.commAddress);
-  Wire.write(LSM6DS3_ACC_GYRO_OUTX_L_XL + (2 * offset) );
-  Wire.endTransmission();
-  
-  Wire.requestFrom(settings.commAddress, 2);    // request 6 bytes from slave device #2
-
-  uint8_t myBufferPointer = 0;
+int16_t Sparkfun_LSM6DS3::readAccel( uint8_t offset ) {
   uint8_t myBuffer[2];
-  while (Wire.available())   // slave may send less than requested
-  {
-    char c = Wire.read(); // receive a byte as character
-    myBuffer[myBufferPointer] = c;
-    myBufferPointer++;
-  }
-  
-  int16_t outputVariable = 0;
-  
+  getRegion(myBuffer, (LSM6DS3_ACC_GYRO_OUTX_L_XL + (offset << 1)), 2);  //Does memory transfer
+
   //Do the math to get from raw numbers to useful int
-  outputVariable = myBuffer[0] | (myBuffer[1] << 8);
-  
+  int16_t outputVariable = myBuffer[0] | (myBuffer[1] << 8);
+ 
   return outputVariable;
 }
 
@@ -132,49 +106,24 @@ int16_t SensorPartNumber::readAccel( uint8_t offset ) {
 //
 //****************************************************************************//
 
-void SensorPartNumber::readGyro( void ) {
-  Wire.beginTransmission(settings.commAddress);
-  Wire.write(LSM6DS3_ACC_GYRO_OUTX_L_G);
-  Wire.endTransmission();
-  
-  Wire.requestFrom(settings.commAddress, 6);    // request 6 bytes from slave device #2
-
-  uint8_t myBufferPointer = 0;
+void Sparkfun_LSM6DS3::readGyro( void ) {
   uint8_t myBuffer[6];
-  while (Wire.available())   // slave may send less than requested
-  {
-    char c = Wire.read(); // receive a byte as character
-    myBuffer[myBufferPointer] = c;
-    myBufferPointer++;
-  }
-  
-  //Do the to get from raw numbers to useful parts.  Save into class.
-  xGyro = myBuffer[0] | (myBuffer[1] << 8);
-  yGyro = myBuffer[2] | (myBuffer[3] << 8);
-  zGyro = myBuffer[4] | (myBuffer[5] << 8);
+  getRegion(myBuffer, LSM6DS3_ACC_GYRO_OUTX_L_G, 6);  //Does memory transfer
+
+  //Do the math to get from raw numbers to useful parts.  Save into class.
+  xAccel = myBuffer[0] | (myBuffer[1] << 8);
+  yAccel = myBuffer[2] | (myBuffer[3] << 8);
+  zAccel = myBuffer[4] | (myBuffer[5] << 8);
+
 }
 
-int16_t SensorPartNumber::readGyro( uint8_t offset ) {
-  Wire.beginTransmission(settings.commAddress);
-  Wire.write(LSM6DS3_ACC_GYRO_OUTX_L_G + (2 * offset) );
-  Wire.endTransmission();
-  
-  Wire.requestFrom(settings.commAddress, 2);    // request 6 bytes from slave device #2
-
-  uint8_t myBufferPointer = 0;
+int16_t Sparkfun_LSM6DS3::readGyro( uint8_t offset ) {
   uint8_t myBuffer[2];
-  while (Wire.available())   // slave may send less than requested
-  {
-    char c = Wire.read(); // receive a byte as character
-    myBuffer[myBufferPointer] = c;
-    myBufferPointer++;
-  }
-  
-  int16_t outputVariable = 0;
-  
+  getRegion(myBuffer, (LSM6DS3_ACC_GYRO_OUTX_L_G + (offset << 1)), 2);  //Does memory transfer
+
   //Do the math to get from raw numbers to useful int
-  outputVariable = myBuffer[0] | (myBuffer[1] << 8);
-  
+  int16_t outputVariable = myBuffer[0] | (myBuffer[1] << 8);
+ 
   return outputVariable;
 }
 
@@ -184,10 +133,10 @@ int16_t SensorPartNumber::readGyro( uint8_t offset ) {
 //
 //****************************************************************************//
 
-void SensorPartNumber::readMag( void ) {
+void Sparkfun_LSM6DS3::readMag( void ) {
 }
 
-int16_t SensorPartNumber::readMag( uint8_t ) {
+int16_t Sparkfun_LSM6DS3::readMag( uint8_t ) {
 }
 
 //****************************************************************************//
@@ -196,13 +145,38 @@ int16_t SensorPartNumber::readMag( uint8_t ) {
 //
 //****************************************************************************//
 
-int16_t SensorPartNumber::readTemp( void ) {
+int16_t Sparkfun_LSM6DS3::readTemp( void ) {
 }
 
-void SensorPartNumber::readAll( void ) {
+void Sparkfun_LSM6DS3::readAll( void ) {
   readAccel();
   readGyro();
   readMag();
   readTemp();
 }
 
+//****************************************************************************//
+//
+//  Utility
+//
+//****************************************************************************//
+void Sparkfun_LSM6DS3::getRegion(uint8_t *outputPointer , uint8_t offset, uint8_t length) {
+
+  //define pointer that will point to the external space
+  //uint8_t * outputPointer;
+  //outputPointer = &outputRegion;
+  
+  Wire.beginTransmission(settings.commAddress);
+  Wire.write(offset);
+  Wire.endTransmission();
+  
+  Wire.requestFrom(settings.commAddress, length);    // request 6 bytes from slave device #2
+
+  while (Wire.available())   // slave may send less than requested
+  {
+    char c = Wire.read(); // receive a byte as character
+    *outputPointer = c;
+    outputPointer++;
+  }
+
+}

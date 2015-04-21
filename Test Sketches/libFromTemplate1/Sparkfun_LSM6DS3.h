@@ -14,8 +14,8 @@ struct SensorSettings {
     uint8_t magEnabled;
     uint8_t magScale;
     uint8_t magSampleRate;
-    uint8_t commInterface;
-    int commAddress;
+    int16_t commInterface;
+    uint8_t commAddress;
     uint8_t tempEnabled;
 };
 
@@ -26,7 +26,7 @@ struct SensorSettings {
 #define Y_DIR 1
 #define Z_DIR 2
 
-class SensorPartNumber {
+class Sparkfun_LSM6DS3 {
 
   public:
     SensorSettings settings;
@@ -43,7 +43,7 @@ class SensorPartNumber {
     int16_t celsiusTemp;
     int16_t fahrenheitTemp;
 
-    SensorPartNumber( void );  //Constructor
+    Sparkfun_LSM6DS3( void );  //Constructor
     uint8_t begin();  //Call to utilize the settings
     void readAccel( void );
     int16_t readAccel( uint8_t );
@@ -53,6 +53,9 @@ class SensorPartNumber {
     int16_t readMag( uint8_t );
     void readAll( void );
     int16_t readTemp( void );
+    
+  //private:
+    void getRegion(uint8_t*, uint8_t, uint8_t );
 };
 
 

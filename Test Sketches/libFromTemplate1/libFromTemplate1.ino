@@ -3,7 +3,7 @@
 #include "stdint.h"
 
 //Don't pass things to the constructor
-SensorPartNumber mySensor;
+Sparkfun_LSM6DS3 mySensor;
 
 void setup( void ) {
   Serial.begin(9600);  // start serial for output
@@ -58,7 +58,6 @@ void loop() {
   Serial.println(mySensor.celsiusTemp);
   Serial.println(mySensor.fahrenheitTemp);
   Serial.println(mySensor.zGyro);
-
 
   //To stop it all
   //mySensor.stop();
