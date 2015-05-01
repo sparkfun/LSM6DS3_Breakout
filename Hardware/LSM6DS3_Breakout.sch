@@ -19335,7 +19335,9 @@ logo. Default layer for the logo on the board is tSilk.</description>
 <connect gate="G$1" pin="VDDIO" pad="5"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="PROD_ID" value="IC-12969" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -22373,7 +22375,7 @@ MODE3:  AUX SPI mode
 <segment>
 <pinref part="JP1" gate="G$1" pin="1"/>
 <wire x1="33.02" y1="35.56" x2="38.1" y2="35.56" width="0.1524" layer="91"/>
-<label x="38.1" y="35.56" size="1.778" layer="95"/>
+<label x="38.1" y="35.56" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="SDO/SA0" class="0">
@@ -22388,7 +22390,7 @@ MODE3:  AUX SPI mode
 <segment>
 <pinref part="JP1" gate="G$1" pin="2"/>
 <wire x1="33.02" y1="33.02" x2="38.1" y2="33.02" width="0.1524" layer="91"/>
-<label x="38.1" y="33.02" size="1.778" layer="95"/>
+<label x="38.1" y="33.02" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="SDX" class="0">

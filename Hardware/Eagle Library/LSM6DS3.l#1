@@ -321,9 +321,7 @@
 <connect gate="G$1" pin="VDDIO" pad="5"/>
 </connects>
 <technologies>
-<technology name="">
-<attribute name="PROD_ID" value="IC-12969" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 </devices>

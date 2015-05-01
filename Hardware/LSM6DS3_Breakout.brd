@@ -161,7 +161,7 @@
 <dimension x1="0" y1="0" x2="0" y2="6.35" x3="-7.62" y3="3.175" textsize="1.778" layer="47" unit="inch"/>
 <dimension x1="0" y1="0" x2="0" y2="16.51" x3="-12.7" y3="8.255" textsize="1.778" layer="47" unit="inch"/>
 <dimension x1="0" y1="0" x2="0" y2="22.86" x3="-17.78" y3="11.43" textsize="1.778" layer="47" unit="inch"/>
-<text x="26.67" y="-7.62" size="1.778" layer="20">Units in Inches</text>
+<text x="26.67" y="-7.62" size="1.778" layer="47">Units in Inches</text>
 <text x="11.43" y="2.778125" size="0.8128" layer="21" font="vector" ratio="15" rot="R90" align="center-left">SDA/SDI</text>
 <text x="8.89" y="5.397371875" size="0.8128" layer="21" font="vector" ratio="15" align="bottom-center">3.3V</text>
 <text x="6.35" y="5.397371875" size="0.8128" layer="21" font="vector" ratio="15" align="bottom-center">GND</text>
@@ -1988,7 +1988,9 @@ design rules under a new name.</description>
 <attribute name="VERSION" value="v03" x="39.37" y="-29.21" size="1.778" layer="51"/>
 <attribute name="DESIGNER" value="Marshall Taylor" x="12.7" y="-29.21" size="1.778" layer="51"/>
 </element>
-<element name="U2" library="LSM6DS3" package="LGA14L_DOT_INDICATOR" value="LSM6DS3" x="11.43" y="11.43" rot="R180"/>
+<element name="U2" library="LSM6DS3" package="LGA14L_DOT_INDICATOR" value="LSM6DS3" x="11.43" y="11.43" rot="R180">
+<attribute name="PROD_ID" value="IC-12969" x="11.43" y="11.43" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
 <element name="C3" library="SparkFun-Capacitors" package="0603-CAP" value="0.1uF" x="7.62" y="13.6525">
 <attribute name="PROD_ID" value="CAP-08390" x="7.62" y="13.6525" size="1.778" layer="27" display="off"/>
 </element>
