@@ -1,0 +1,23 @@
+Things to do:
+Note:  Place (DONE) next to items when complete
+
+
+Finish drivers
+
+Examples:
+Minimalist (I2C)
+I2C example (1, 2, options)
+SPI example (options)
+FIFO example I2C mode
+Interrupt example (service all)
+
+Test proto 2
+Run type test
+
+Clean repositories
+
+Write README.md files
+
+Push RedBoard
+
+Write hookup guide
