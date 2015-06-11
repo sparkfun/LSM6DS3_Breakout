@@ -20443,6 +20443,28 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <text x="0" y="3.73" size="0.4064" layer="27">&gt;Value</text>
 <pad name="5" x="4" y="0.18" drill="0.7" diameter="1.6"/>
 </package>
+<package name="1X01_NO_SILK">
+<pad name="1" x="0" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<text x="1.1938" y="1.8288" size="1.27" layer="25">&gt;NAME</text>
+<text x="-1.27" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
+</package>
+<package name="1X06_NO_SILK_YES_STOP">
+<pad name="1" x="0" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<pad name="2" x="2.54" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<pad name="3" x="5.08" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<pad name="4" x="7.62" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<pad name="5" x="10.16" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<pad name="6" x="12.7" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<text x="-1.3462" y="1.8288" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-1.27" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="12.446" y1="-0.254" x2="12.954" y2="0.254" layer="51"/>
+<rectangle x1="9.906" y1="-0.254" x2="10.414" y2="0.254" layer="51"/>
+<rectangle x1="7.366" y1="-0.254" x2="7.874" y2="0.254" layer="51"/>
+<rectangle x1="4.826" y1="-0.254" x2="5.334" y2="0.254" layer="51"/>
+<rectangle x1="2.286" y1="-0.254" x2="2.794" y2="0.254" layer="51"/>
+<rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
+</package>
 </packages>
 <symbols>
 <symbol name="M06">
@@ -20837,6 +20859,19 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 </technology>
 </technologies>
 </device>
+<device name="NO_SILK_YES_STOP" package="1X06_NO_SILK_YES_STOP">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="M01" prefix="JP" uservalue="yes">
@@ -20959,6 +20994,14 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 </technologies>
 </device>
 <device name="NOSILK-KIT" package="1X01NS-KIT">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="PTH_NO_SILK_YES_STOP" package="1X01_NO_SILK">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 </connects>
@@ -22151,7 +22194,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <parts>
 <part name="FRAME1" library="SparkFun-Aesthetics" deviceset="FRAME-LETTER" device="">
 <attribute name="DESIGNER" value="Marshall Taylor"/>
-<attribute name="VERSION" value="v03"/>
+<attribute name="VERSION" value="v10"/>
 </part>
 <part name="U2" library="LSM6DS3" deviceset="LSM6DS3" device="DOT_INDICATION" value="LSM6DS3"/>
 <part name="GND4" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
@@ -22181,13 +22224,13 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="GND11" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="R3" library="SparkFun-Resistors" deviceset="10KOHM-1/10W-1%(0603)" device="0603" value="10K"/>
 <part name="SJ2" library="SparkFun-Passives" deviceset="JUMPER-PAD-3-NC_BY_TRACE" device="" value="S_MODE"/>
-<part name="JP1" library="SparkFun-Connectors" deviceset="M06" device="SILK_FEMALE_PTH" value="IO"/>
+<part name="JP1" library="SparkFun-Connectors" deviceset="M06" device="NO_SILK_YES_STOP" value="IO"/>
 <part name="GND1" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND2" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="SJ3" library="SparkFun-Passives" deviceset="JUMPER-PAD-2-NC_BY_TRACE" device=""/>
 <part name="SJ4" library="SparkFun-Passives" deviceset="JUMPER-PAD-2-NC_BY_TRACE" device=""/>
-<part name="JP2" library="SparkFun-Connectors" deviceset="M01" device="PTH" value="3.3V"/>
-<part name="JP11" library="SparkFun-Connectors" deviceset="M01" device="PTH" value="GND"/>
+<part name="JP2" library="SparkFun-Connectors" deviceset="M01" device="PTH_NO_SILK_YES_STOP" value="3.3V"/>
+<part name="JP11" library="SparkFun-Connectors" deviceset="M01" device="PTH_NO_SILK_YES_STOP" value="GND"/>
 <part name="LOGO3" library="SparkFun-Aesthetics" deviceset="SFE_LOGO_NAME_FLAME" device=".1_INCH" value="SFE_LOGO_NAME_FLAME.1_INCH"/>
 <part name="JP3" library="SparkFun-Connectors" deviceset="M05" device="PTH" value="IO"/>
 </parts>
@@ -22367,7 +22410,7 @@ MODE3:  AUX SPI mode
 <net name="CS" class="0">
 <segment>
 <pinref part="U2" gate="G$1" pin="CS"/>
-<label x="120.142" y="112.014" size="1.27" layer="95" font="vector" ratio="15"/>
+<label x="120.142" y="112.014" size="1.27" layer="95" font="vector"/>
 <wire x1="106.68" y1="111.76" x2="124.46" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="124.46" y1="111.76" x2="124.46" y2="116.84" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="1"/>
