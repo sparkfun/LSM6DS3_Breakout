@@ -6,9 +6,9 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.003125" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.0125" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="no" active="yes"/>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
 <layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
 <layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
@@ -28,7 +28,7 @@
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="22" name="bPlace" color="14" fill="1" visible="yes" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
@@ -276,6 +276,32 @@ SPI</text>
 <wire x1="6.985" y1="2.54" x2="7.62" y2="1.905" width="0.2032" layer="21"/>
 <wire x1="7.62" y1="1.905" x2="8.255" y2="2.54" width="0.2032" layer="21"/>
 <wire x1="8.255" y1="2.54" x2="7.62" y2="3.175" width="0.2032" layer="21"/>
+<wire x1="17.491075" y1="12.2920125" x2="19.396075" y2="12.2920125" width="0.254" layer="22"/>
+<wire x1="18.888075" y1="11.7840125" x2="18.888075" y2="12.9270125" width="0.254" layer="22" curve="-180"/>
+<wire x1="18.888075" y1="12.9270125" x2="18.634075" y2="13.0540125" width="0.254" layer="22"/>
+<wire x1="18.888075" y1="12.9270125" x2="18.761075" y2="12.6730125" width="0.254" layer="22"/>
+<wire x1="17.491075" y1="12.2920125" x2="17.745075" y2="12.0380125" width="0.254" layer="22"/>
+<wire x1="17.491075" y1="12.2920125" x2="17.745075" y2="12.5460125" width="0.254" layer="22"/>
+<wire x1="20.6248" y1="9.2344875" x2="20.6248" y2="11.0124875" width="0.254" layer="22"/>
+<wire x1="21.2598" y1="10.6314875" x2="19.9898" y2="10.6314875" width="0.254" layer="22" curve="-180"/>
+<wire x1="19.9898" y1="10.6314875" x2="19.8628" y2="10.3774875" width="0.254" layer="22"/>
+<wire x1="19.9898" y1="10.6314875" x2="20.2184" y2="10.5044875" width="0.254" layer="22"/>
+<wire x1="20.6248" y1="9.2344875" x2="20.8788" y2="9.4884875" width="0.254" layer="22"/>
+<wire x1="20.6248" y1="9.2344875" x2="20.3708" y2="9.4884875" width="0.254" layer="22"/>
+<wire x1="20.9042" y1="9.5138875" x2="20.3454" y2="9.5138875" width="0.254" layer="22"/>
+<wire x1="20.2184" y1="10.5044875" x2="19.8628" y2="10.3774875" width="0.254" layer="22"/>
+<wire x1="18.634075" y1="13.0540125" x2="18.761075" y2="12.6730125" width="0.254" layer="22"/>
+<wire x1="17.745075" y1="12.5460125" x2="17.745075" y2="12.0380125" width="0.254" layer="22"/>
+<text x="21.9471875" y="8.89" size="1.016" layer="22" font="vector" ratio="15" rot="SMR0">Y</text>
+<text x="18.0578125" y="12.9778125" size="1.016" layer="22" font="vector" ratio="15" rot="SMR0">X</text>
+<text x="20.558125" y="13.1365625" size="1.016" layer="22" font="vector" ratio="15" rot="SMR0">Z</text>
+<wire x1="20.951825" y1="13.2889625" x2="21.2852" y2="13.3365875" width="0.254" layer="22"/>
+<wire x1="20.951825" y1="13.2889625" x2="21.078825" y2="12.9809875" width="0.254" layer="22"/>
+<wire x1="21.078825" y1="12.9809875" x2="21.2852" y2="13.3365875" width="0.254" layer="22"/>
+<wire x1="21.082" y1="13.2095875" x2="21.4884" y2="11.5966875" width="0.254" layer="22" curve="-100"/>
+<circle x="20.627975" y="12.2443875" radius="0.5334" width="0.254" layer="22"/>
+<wire x1="20.2803125" y1="12.5809375" x2="20.9946875" y2="11.8665625" width="0.2032" layer="22"/>
+<wire x1="20.955" y1="12.5809375" x2="20.240625" y2="11.8665625" width="0.2032" layer="22"/>
 </plain>
 <libraries>
 <library name="SparkFun-Aesthetics">
