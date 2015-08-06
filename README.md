@@ -29,6 +29,7 @@ Product Versions
 Version History
 ---------------
 * [V_1.0.0](https://github.com/sparkfun/LSM6DS3_Breakout/releases/tag/V_1.0.0) - Initial product release repository
+* [V_0.3.0](https://github.com/sparkfun/LSM6DS3_Breakout/releases/tag/V_0.3.0) - HW version 0.3 release
 
 License Information
 -------------------
