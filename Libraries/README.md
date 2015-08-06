@@ -1,4 +1,4 @@
-SparkFun <PRODUCT NAME> Libraries
+SparkFun LSM6DS3 Breakout Libraries
 =================================
 
 Libraries for use in different environments. 
@@ -7,8 +7,6 @@ Libraries for use in different environments.
 Directory Contents
 -------------------
 * **/Arduino** - [Arduino IDE](http://www.arduino.cc/en/Main/Software) libraries
-* **/Spark.io** - [Spark.io IDE](https://build.spark.io/build) libraries
-
 
 
 Update Library Instructions:

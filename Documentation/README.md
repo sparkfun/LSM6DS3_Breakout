@@ -1,7 +1,7 @@
 SparkFun Documentation
 =======================
 
-File list
+File List
 ---------
 
 * AN4650_DM00157511.pdf - LSM6DS3 application note
