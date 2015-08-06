@@ -19,7 +19,7 @@ Repository Contents
 
 Documentation
 --------------
-* **[Library](https://github.com/sparkfun/SparkFun_LSM6DS3_Arduino_Library)** - C++ library for the LSM5DS3 Breakout.
+* **[Library](https://github.com/sparkfun/SparkFun_LSM6DS3_Arduino_Library)** - C++ library for the LSM6DS3 Breakout.
 * **[Hookup Guide](https://learn.sparkfun.com/tutorials/lsm6ds3-breakout-hookup-guide)** - Basic hookup guide for the LSM6DS3 Breakout.
 
 Product Versions
