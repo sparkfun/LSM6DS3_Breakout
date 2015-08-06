@@ -1,40 +1,34 @@
 SparkFun <PRODUCT NAME>
 ========================================
 
-![SparkFun Part Name](URL for picture of part)
+![LSM6DS3 Breakout](https://cdn.sparkfun.com/assets/learn_tutorials/4/1/6/perspective.jpg)
 
-[*SparkFun Part Name (SKU)*](URL for product on Sparkfun.com)
+[*LSM6DS3 Breakout (SEN-13339)*](https://www.sparkfun.com/products/13339)
 
-<Basic description of the part.>
+The LSM6DS3 Breakout board allows easy connection to the LSM6DS3.
+
+The LSM6DS3 is a accelerometer, gyroscope, and temperature sensor with embedded functions targeted at cellphones.  It can do high sample rates and includes an 8kB FIFO buffer for burst reads.
 
 Repository Contents
 -------------------
 
 * **/Documentation** - Data sheets, additional product information
-* **/Enclosure** - Enclosure files 
-* **/Firmware** - Example code 
 * **/Hardware** - Eagle design files (.brd, .sch)
-* **/Libraries** - Libraries for use with the <PRODUCT NAME>
+* **/Libraries** - Libraries for use with the LSM6DS3 Breakout
 * **/Production** - Production panel files (.brd)
-* **/Software** - Related software for the <PRODUCT NAME>
 
 Documentation
 --------------
-* **[Library](GitHub library URL)** - <LANGUAGE> library for the <PRODUCT NAME>.
-* **[Hookup Guide](Learn.SparkFun URL)** - Basic hookup guide for the <PRODUCT NAME>.
-* **[SparkFun Fritzing repo](https://github.com/sparkfun/Fritzing_Parts)** - Fritzing diagrams for SparkFun products.
-* **[SparkFun 3D Model repo](https://github.com/sparkfun/3D_Models)** - 3D models of SparkFun products. 
+* **[Library](https://github.com/sparkfun/SparkFun_LSM6DS3_Arduino_Library)** - C++ library for the LSM5DS3 Breakout.
+* **[Hookup Guide](https://learn.sparkfun.com/tutorials/lsm6ds3-breakout-hookup-guide)** - Basic hookup guide for the LSM6DS3 Breakout.
 
 Product Versions
 ----------------
-* [Part SKU](part URL)- Basic part and short description here
-* [Retail part SKU] (retail URL)- Retail packaging of standard description here
-* [Any other parts this repo covers](any other URLs) - Description of said parts
+* [SEN-13339](https://www.sparkfun.com/products/13339)- LSM6DS3 Breakout board
 
 Version History
 ---------------
-* [vExxFxxZxxHxxLxxSxx](URL for tag specific to this version) - Description 
-* [vEyyFyyZyyHyyLyySyy](URL for tag specific to this version) - Description
+* [V_1.0.0](https://github.com/sparkfun/LSM6DS3_Breakout/releases/tag/V_1.0.0) - Initial product release repository
 
 License Information
 -------------------
@@ -48,5 +42,3 @@ If you have any questions or concerns on licensing, please contact techsupport@s
 Distributed as-is; no warranty is given.
 
 - Your friends at SparkFun.
-
-_<COLLABORATION CREDIT>_
